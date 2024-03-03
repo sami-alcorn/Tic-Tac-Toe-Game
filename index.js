@@ -13,7 +13,8 @@
    /*function that is called when a square is clicked on, determines which square based on 
    its index in the array*/
     function squareClicked(index) {
-        /*if there is no winner and the square is empty, the square that has been
+         /*if there is a winner and none of the squares are empty, it won't update the
+        content of the square that is clicked on, otherwise the square that has been
         clicked on will display the letter of the current player*/
         if (winner || squares[index].textContent !== '') 
         return
