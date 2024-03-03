@@ -1,3 +1,5 @@
+   /*declares winner alert variable*/
+   let winneralert = document.getElementById("alert-winner")
    /*array of all the squares*/
     let squares = [document.getElementById("square-0"), document.getElementById("square-1"), 
         document.getElementById("square-2"), document.getElementById("square-3"),
@@ -20,11 +22,11 @@
         won the game, there is an alert that the current player won*/
       if (checkWinner(currentPlayer)) {
         winner = currentPlayer
-        alert(`Player ${currentPlayer} wins!`)
+        winneralert.textContent = `Player ${currentPlayer} wins!`
       } 
      /*if there is no winner, it checks for a tie, if there is a tie it alerts that*/
       else if (checkTie()) {
-        alert(`It's a tie!`)
+        winneralert.textContent = `It's a tie!`
       } 
       /*if there is no winner and it is not a tie, the div displaying whose turn it is
       will change to the other player - used a ternary operator*/
@@ -74,7 +76,8 @@
       for (let i = 0; i < squares.length; i++) {
         squares[i].textContent = ''
       }
-      /*resets the winner as null, resets current player back to X, resets player turn div*/
+      /*resets winner/tie alert, resets the winner as null, resets current player back to X, resets player turn div*/
+      winneralert.textContent = `Who will win this round?`
       winner = null
       currentPlayer = 'X'
       playerTurn.textContent = `Player ${currentPlayer}'s turn`

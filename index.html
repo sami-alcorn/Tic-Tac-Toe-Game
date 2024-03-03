@@ -9,9 +9,10 @@
    
 </head>
 <body>
-  <!--all page contents inside dive with built in top margin-->
+  <!--all page contents inside div with built in top margin-->
     <div class="container mt-5">
       <!--game header-->
+      <div class="alert alert-info" role="alert" id="alert-winner">Who will win this round?</div>
       <h1>TIC TAC TOE</h1>
       <table>
         <!--all the squares have an id so I could make an array of them and
@@ -41,7 +42,7 @@
       <br>
         <!--button to clear the board for a new game-->
         <button class="btn btn-primary" onclick="clearBoard()">New Game</button>
-        
+
         <script src="index.js"></script>
         <script src="node_modules/jquery/dist/jquery.js"></script>
 </body>
