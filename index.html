@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+  <!--all page contents inside dive with built in top margin-->
+    <div class="container mt-5">
+      <!--game header-->
+      <h1>TIC TAC TOE</h1>
+      <table>
+        <!--all the squares have an id so I could make an array of them and
+        they all have an onclick funtion to add the letter of the player to the square
+        and the each has an index to identify it so there doesn't need to be a separate
+        function for every square-->
+        <tr>
+          <td id="square-0" onclick="squareClicked(0)"></td>
+          <td id="square-1" onclick="squareClicked(1)"></td>
+          <td id="square-2" onclick="squareClicked(2)"></td>
+        </tr>
+        <tr>
+          <td id="square-3" onclick="squareClicked(3)"></td>
+          <td id="square-4" onclick="squareClicked(4)"></td>
+          <td id="square-5" onclick="squareClicked(5)"></td>
+        </tr>
+        <tr>
+          <td id="square-6" onclick="squareClicked(6)"></td>
+          <td id="square-7" onclick="squareClicked(7)"></td>
+          <td id="square-8" onclick="squareClicked(8)"></td>
+        </tr>
+      </table>
+      <br>
+      <!--This shows whose turn it is, it always starts on X and changes every time a
+      square is clicked, indicating a turn as been taken-->
+      <div id="turn">Player X's turn</div>
+      <br>
+        <!--button to clear the board for a new game-->
+        <button class="btn btn-primary" onclick="clearBoard()">New Game</button>
+        
+        <script src="index.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

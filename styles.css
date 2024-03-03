@@ -1,0 +1,22 @@
+/*styled so the inner borders aren't doubled*/
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+/*size of the squares, style, thickness and color of border, 
+size of text and text is centered*/
+td {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 40px;
+}
+/*centers everything in the container div*/
+.container {
+  text-align: center;
+}
+/*size of text displaying turn*/
+#turn {
+  font-size: 20px;
+}
